@@ -10,8 +10,19 @@ a{
 	text-decoration:none;
 }
 
+span{
+	color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+h1{
+	color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
 
-
+h2{
+	color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
 img.mb_bgimage{
 	position:fixed;
 	left:0px;
@@ -69,7 +80,7 @@ img.mb_bgimage{
 }
 .mb_menu{
 	position:absolute;
-	top:154px;
+	top:80px;
 	left:0px;
 	z-index:11;
 }
@@ -97,7 +108,7 @@ img.mb_bgimage{
 
 .mb_menu2{
 	position:absolute;
-	top:154px;
+	top:80px;
 	right:0px;
 	z-index:11;
 }
@@ -209,9 +220,10 @@ span.mb_close2:hover{
 	font-family:"Astloch";
 	text-shadow:0px 0px 1px #fff;
 	font-size:42px;
-	background:transparent url(../images/line.png) repeat-x bottom left;
+	background:transparent repeat-x bottom left;
 	padding:0px 0px 5px 0px;
 	margin-bottom:10px;
+	text-shadow: 10px 10px black;
 }
 
 .mb_content2{
@@ -222,9 +234,10 @@ span.mb_close2:hover{
 	font-family:"Astloch";
 	text-shadow:0px 0px 1px #fff;
 	font-size:42px;
-	background:transparent url(../images/line.png) repeat-x bottom right;
+	background:transparent repeat-x bottom right;
 	padding:0px 0px 5px 0px;
 	margin-bottom:10px;
+	text-shadow: 10px 10px black;
 }
 
 .mb_content_inner{

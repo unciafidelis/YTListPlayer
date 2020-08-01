@@ -8,23 +8,29 @@ body{
 	position: relative;
 	margin: 0px auto 0 auto;
 	padding: 10px;
+	color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 .rw-sentence{
 	margin: 0;
+	color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 .rw-sentence span{
 	text-align: center;
 	color: rgba(255,255,255,1);
 	font-family: 'Trocchi';
 	white-space: nowrap;
-	text-shadow: 2px 5px 10px rgba(0,0,0,0.1);
+	text-shadow: 10px 10px 10px rgba(0,0,0,0.1);
 	opacity: 0;
-	-webkit-animation: fadeSentence 60s linear;
-	-ms-animation: fadeSentence 60s linear;
-	animation: fadeSentence 60s linear;
+	-webkit-animation: fadeSentence 30s linear;
+	-ms-animation: fadeSentence 30s linear;
+	animation: fadeSentence 30s linear;
+
 }
 .rw-sentence > span{
 	position: absolute;
+	text-shadow: 10px 10px 10px rgba(0,0,0,0.1);
 }
 .rw-sentence > span:first-child{
 	top: 30px;
@@ -34,6 +40,7 @@ body{
 	-webkit-animation: fadeSentence 60s linear 1s infinite;
 	-ms-animation: fadeSentence 60s linear 1s infinite;
 	animation: fadeSentence 60s linear 1s infinite;
+	text-shadow: 10px 10px 10px rgba(0,0,0,0.1);
 }
 	
 .rw-sentence > span:nth-child(2){
@@ -41,18 +48,21 @@ body{
 	left: 380px;
 	font-size: 315%;
 	color: rgba(255,255,255, 0.8);
+	text-shadow: 10px 10px 10px rgba(0,0,0,0.1);
 }
 .rw-sentence > span:nth-child(3){
 	top: 180px;
 	left: 0px;
 	font-size: 800%;
 	color: rgba(255,255,255,1);
+	text-shadow: 10px 10px 10px rgba(0,0,0,0.1);
 }
 .rw-sentence > span:last-child{
 	top: 635px;
 	left: 690px;
 	font-size: 150%;
 	color: rgba(255,255,255, 2);
+	text-shadow: 10px 10px 10px rgba(0,0,0,0.1);
 }
 .rw-words{
 	position: absolute;
@@ -62,6 +72,7 @@ body{
 	width: 400px;
 	-webkit-perspective: 800px;
 	perspective: 800px;
+	text-shadow: 10px 10px 10px rgba(0,0,0,0.1);
 }
 
 

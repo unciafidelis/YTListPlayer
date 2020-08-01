@@ -34,11 +34,8 @@ function initialize(){
         updateTimerDisplay();
         updateProgressBar();
     }, 1000);
-
-
     $('#volume-input').val(Math.round(player.getVolume()));
 }
-
 
 // This function is called by initialize()
 function updateTimerDisplay(){
@@ -46,7 +43,6 @@ function updateTimerDisplay(){
     $('#current-time').text(formatTime( player.getCurrentTime() ));
     $('#duration').text(formatTime( player.getDuration() ));
 }
-
 
 // This function is called by initialize()
 function updateProgressBar(){
@@ -68,13 +64,11 @@ $('#progress-bar').on('mouseup touchend', function (e) {
 
 });
 
-
 // Playback
 
 $('#play').on('click', function () {
     player.playVideo();
 });
-
 
 $('#pause').on('click', function () {
     player.pauseVideo();
@@ -84,9 +78,7 @@ $('#stop').on('click', function () {
     player.stopVideo();
 });
 
-
 // Sound volume
-
 
 $('#mute-toggle').on('click', function() {
     var mute_toggle = $(this);
@@ -105,9 +97,7 @@ $('#volume-input').on('change', function () {
     player.setVolume($(this).val());
 });
 
-
 // Other options
-
 
 $('#speed').on('change', function () {
     player.setPlaybackRate($(this).val());
@@ -116,7 +106,6 @@ $('#speed').on('change', function () {
 $('#quality').on('change', function () {
     player.setPlaybackQuality($(this).val());
 });
-
 
 // Playlist
 
@@ -130,13 +119,18 @@ $('#prev').on('click', function () {
 
 $('#web').on('click', function () {
     var url = 'url';
-    var url = prompt("coloca la dirección de la lista de reproducción","ej. www.Youtube.com/list/ejemplo");
+    var url = prompt("coloca la dirección de la lista de reproducción, si no funciona prueba recargando la página.","ej. https://www.youtube.com/watch?v=Xa0Q0J5tOP0&list=taJ60kskkns");
         var url_obj = new URL(url);
         getId = url_obj.searchParams.get('v');
         getList = url_obj.searchParams.get('list');
-        document.getElementById('url').innerHTML = url;
+        document.getElementById('ms').innerHTML = 'Morgan YouTube Player - Prototype';
         onYouTubeIframeAPIReady(getId,getList);       
 });
+
+$('#refresh').on('click', function () {
+    location.reload();
+});
+
 // Load video
 
 $('.thumbnail').on('click', function () {
@@ -146,7 +140,6 @@ $('.thumbnail').on('click', function () {
     player.cueVideoById(url);
 
 });
-
 
 // Helper Functions
 
@@ -160,7 +153,6 @@ function formatTime(time){
 
     return minutes + ":" + seconds;
 }
-
 
 $('pre code').each(function(i, block) {
     hljs.highlightBlock(block);
